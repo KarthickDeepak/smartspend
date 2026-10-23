@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  background: #f5f7fb;
+  color: #152038;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select, textarea { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+::selection { background: #a9f0d6; color: #101c3a; }
+
+.font-display { font-family: 'Manrope', 'DM Sans', ui-sans-serif, system-ui, sans-serif; }
+.auth-gradient { background: radial-gradient(ellipse at 10% 0%, rgba(36, 180, 126, .13), transparent 38%), radial-gradient(ellipse at 85% 90%, rgba(70, 125, 206, .13), transparent 42%), #f5f7fb; }
+.dark .auth-gradient { background: radial-gradient(ellipse at 10% 0%, rgba(36, 180, 126, .10), transparent 38%), radial-gradient(ellipse at 85% 90%, rgba(70, 125, 206, .12), transparent 42%), #0c142b; }
+.section-eyebrow { color: #98a3b7; font-size: 10px; font-weight: 800; letter-spacing: .16em; line-height: 1.4; }
+.dark .section-eyebrow { color: #73819d; }
+.nav-button-active { color: #15956b; background: linear-gradient(100deg, rgba(36, 180, 126, .12), rgba(36, 180, 126, .035)); box-shadow: inset 3px 0 0 #24b47e; }
+.dark .nav-button-active { color: #95f2cc; background: rgba(36, 180, 126, .13); box-shadow: inset 3px 0 0 #24b47e; }
+.hero-orb { pointer-events: none; position: absolute; border-radius: 9999px; border: 1px solid rgba(255,255,255,.09); }
+.hero-orb-one { width: 360px; height: 360px; right: -95px; top: -225px; box-shadow: 0 0 0 40px rgba(255,255,255,.025), 0 0 0 80px rgba(255,255,255,.018); }
+.hero-orb-two { width: 280px; height: 280px; right: 17%; bottom: -250px; box-shadow: 0 0 0 38px rgba(255,255,255,.022); }
+
+/* Chart labels are owned by Recharts; keep tooltips legible in both themes. */
+.recharts-default-tooltip { box-shadow: 0 12px 36px rgba(10, 25, 55, .12); }
+.dark .recharts-default-tooltip { background: #172342 !important; border-color: rgba(255,255,255,.12) !important; color: #f8fafc !important; }
+.dark .recharts-tooltip-item, .dark .recharts-tooltip-label { color: #e2e8f0 !important; }
+
+@media (max-width: 1023px) {
+  .app-shell main { scroll-margin-top: 76px; }
+  .modal-panel { padding-bottom: max(1.25rem, env(safe-area-inset-bottom)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
